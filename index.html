@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form>
+        <div class="formdesign">
+            User Name:<br>
+            <input type="text" name="fname" id="fname" onkeyup="validateName()">
+            <b><span id="name-error" class="formerror"></span></b>
+        </div>
+        <div class="formdesign">
+            Email:<br>
+            <input type="text" name="femail" id="femail" onkeyup="validateEmail()">
+            <b><span id="email-error" class="formerror"><b></b></span></b>
+        </div>
+        <div class="formdesign">
+            Password:<br>
+            <input type="password" name="fpass" id="fpass" onkeyup="validatePass()">
+            <b><span id="password-error" class="formerror"></span></b>
+        </div>
+        <div class="formdesign">
+            Mobile:<br>
+            <input type="text" name="fmobile" id="fmobile" onkeyup="validateMobile()">
+            <b><span id="mobile-error" class="formerror"></span></b>
+        </div>
+        <div class="formdesign">
+            Description:<br>
+            <textarea class="text-area" rows="10" cols="80" id="fdescription" onkeyup="validateDes()"></textarea>
+            <b><span id="des-error" class="formerror"></span></b>
+        </div>
+        <input type="submit" class="but" value="Submit" onclick="return validateForm()">
+        <b><span id="submit-error" class="formerror"></span></b>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
